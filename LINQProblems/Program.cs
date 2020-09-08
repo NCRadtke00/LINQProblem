@@ -19,6 +19,13 @@ namespace LINQProblems
             Console.ReadLine();
 
             List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
+            var noDuplicateNames = names.Distinct();
+            foreach (var name in noDuplicateNames)
+            {
+                Console.WriteLine(name);
+            }
+            Console.ReadLine();
+
 
             List<string> classGrades = new List<string>()
             {
