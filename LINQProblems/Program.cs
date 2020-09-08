@@ -34,7 +34,15 @@ namespace LINQProblems
                 "73,88,83,99,64",
                 "98,100,66,74,55"
             };
+            var splitGrades = classGrades.Select(//notsurewheretostart);
+            Console.WriteLine(splitGrades);
+
             //4.Write a function that takes in a string of letters(i.e. “Terrill”) and returns an alphabetically ordered string corresponding to the letter frequency(i.e. "E1I1L2R2T1")
+            var originalString = "Terrill".ToUpper();
+            var frequency =  ; //string 
+            Console.WriteLine(frequency);
+            Console.ReadLine();
+
         }
     }
 }
