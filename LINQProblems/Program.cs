@@ -11,6 +11,13 @@ namespace LINQProblems
         static void Main(string[] args)
         {
             List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth",/* “mathematics” */};
+            var thWords = words.Where(w => w.Contains("th"));
+            foreach (var word in thWords)
+            {
+                Console.WriteLine(word);
+            }
+            Console.ReadLine();
+
             List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
 
             List<string> classGrades = new List<string>()
