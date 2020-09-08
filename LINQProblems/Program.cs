@@ -34,12 +34,14 @@ namespace LINQProblems
                 "73,88,83,99,64",
                 "98,100,66,74,55"
             };
-            var splitGrades = classGrades.Select(//notsurewheretostart);
+            var splitGrades = classGrades.Select(grades => grades.Split(',')).Select(grades => grades.Select(grade=> double.Parse(grade)).OrderBy(grade => grade).Skip(1)).SelectMany(grades => grades).Average();
             Console.WriteLine(splitGrades);
+            Console.ReadLine();
 
             //4.Write a function that takes in a string of letters(i.e. “Terrill”) and returns an alphabetically ordered string corresponding to the letter frequency(i.e. "E1I1L2R2T1")
-            var originalString = "Terrill".ToUpper();
-            var frequency =  ; //string 
+            var originalName = "Terrill".ToUpper();
+            var frequency = string.Join("", originalName.OrderBy(letter => letter).Distinct().Select(letter => $"{letter}{originalName.Count(number => number == letter)}"));
+
             Console.WriteLine(frequency);
             Console.ReadLine();
 
